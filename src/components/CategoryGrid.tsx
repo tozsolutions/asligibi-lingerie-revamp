@@ -1,30 +1,34 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import categoryJartiyer from "@/assets/category-jartiyer.jpg";
+import categoryBabydoll from "@/assets/category-babydoll.jpg";
+import categoryVucutcoraplari from "@/assets/category-vucutcoraplari.jpg";
+import categoryIccamasirtakimlari from "@/assets/category-iccamasirtakimlari.jpg";
 
 const CategoryGrid = () => {
   const categories = [
     {
       name: "Jartiyer",
       href: "/jartiyer",
-      image: "/placeholder.svg",
+      image: categoryJartiyer,
       description: "Şık ve zarif jartiyer modelleri"
     },
     {
       name: "Babydoll",
       href: "/babydoll",
-      image: "/placeholder.svg",
+      image: categoryBabydoll,
       description: "Romantik babydoll koleksiyonu"
     },
     {
       name: "Vücut Çorapları",
       href: "/vucutcoraplari",
-      image: "/placeholder.svg",
+      image: categoryVucutcoraplari,
       description: "Seksi vücut çorapları"
     },
     {
       name: "İç Çamaşır Takımları",
       href: "/iccamasirtakimlari",
-      image: "/placeholder.svg",
+      image: categoryIccamasirtakimlari,
       description: "Çiftli iç çamaşır takımları"
     }
   ];

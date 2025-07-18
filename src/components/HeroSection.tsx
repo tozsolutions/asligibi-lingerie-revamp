@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import heroBanner1 from "@/assets/hero-banner-1.jpg";
+import heroBanner2 from "@/assets/hero-banner-2.jpg";
+import heroBanner3 from "@/assets/hero-banner-3.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,21 +13,21 @@ const HeroSection = () => {
       title: "AslıGibi'ye hoşgeldin",
       subtitle: "İlk alışverişine özel indirim kodun: Merhaba",
       buttonText: "Alışverişe Başla",
-      image: "/placeholder.svg",
+      image: heroBanner1,
       gradient: "from-primary/90 to-secondary/90"
     },
     {
       title: "Lazer Kesim Koleksiyonu",
       subtitle: "Zarif ve modern tasarımlarla tanışın",
       buttonText: "Keşfet",
-      image: "/placeholder.svg",
+      image: heroBanner2,
       gradient: "from-secondary/90 to-primary/90"
     },
     {
       title: "Dantel Ürünleri",
       subtitle: "Klasik şıklığın modern yorumu",
       buttonText: "İncele",
-      image: "/placeholder.svg",
+      image: heroBanner3,
       gradient: "from-primary/90 to-secondary/90"
     }
   ];

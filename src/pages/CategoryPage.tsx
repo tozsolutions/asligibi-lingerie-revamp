@@ -7,6 +7,18 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import ProductCard from "@/components/ProductCard";
+import jartiyer1 from "@/assets/jartiyer-1.jpg";
+import jartiyer2 from "@/assets/jartiyer-2.jpg";
+import jartiyer3 from "@/assets/jartiyer-3.jpg";
+import jartiyer4 from "@/assets/jartiyer-4.jpg";
+import babydoll1 from "@/assets/babydoll-1.jpg";
+import babydoll2 from "@/assets/babydoll-2.jpg";
+import babydoll3 from "@/assets/babydoll-3.jpg";
+import babydoll4 from "@/assets/babydoll-4.jpg";
+import vucutCoraplari1 from "@/assets/vucut-coraplari-1.jpg";
+import vucutCoraplari2 from "@/assets/vucut-coraplari-2.jpg";
+import icCamasirTakimi1 from "@/assets/ic-camasir-takimi-1.jpg";
+import icCamasirTakimi2 from "@/assets/ic-camasir-takimi-2.jpg";
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -14,59 +26,198 @@ const CategoryPage = () => {
   const [priceRange, setPriceRange] = useState([0, 1000]);
   const [sortBy, setSortBy] = useState("popular");
 
-  // Mock data - kategori bazında ürünler
-  const products = [
+  // Gerçek ürün verileri - kategori bazında, fiyatlar %25 artırılmış
+  const allProducts = [
+    // Jartiyer kategorisi
     {
-      id: "1",
-      name: "Dantel Jartiyer Takımı",
-      price: 187.5,
-      originalPrice: 250,
-      image: "/placeholder.svg",
+      id: "j1",
+      name: "Passione Kırmızı Fırfır Bacak Aksesuarlı Jartiyerli Fantasy Tanga",
+      price: 361.25, // 289 + %25
+      originalPrice: 400,
+      image: jartiyer1,
       category: "Jartiyer",
       isNew: true,
-      discount: 15
+      discount: 10
     },
     {
-      id: "2",
-      name: "Siyah Jartiyer",
-      price: 156.25,
-      image: "/placeholder.svg",
-      category: "Jartiyer"
+      id: "j2",
+      name: "Intive Dantelli Saten İnce Askılı V Yaka Yandan Yırtmaçlı Mini Gecelik",
+      price: 686.25, // 549 + %25
+      originalPrice: 750,
+      image: jartiyer2,
+      category: "Jartiyer",
+      discount: 8
     },
     {
-      id: "3",
-      name: "Beyaz Dantel Jartiyer",
-      price: 225,
-      originalPrice: 275,
-      image: "/placeholder.svg",
+      id: "j3",
+      name: "Intive Dantel Detaylı Yumuşacık Püskül Desenli Pijama Takımı",
+      price: 436.25, // 349 + %25
+      originalPrice: 486.25,
+      image: jartiyer3,
       category: "Jartiyer",
       discount: 10
     },
     {
-      id: "4",
-      name: "Kırmızı Jartiyer Takımı",
-      price: 312.5,
-      image: "/placeholder.svg",
+      id: "j4",
+      name: "YNT Siyah Kiraz Desenli İnce Askılı Derin V Dekolte Mini Gecelik",
+      price: 713.8, // 571.04 + %25
+      originalPrice: 775.88,
+      image: jartiyer4,
+      category: "Jartiyer",
+      discount: 8
+    },
+    {
+      id: "j5",
+      name: "Dantel İşlemeli Kırmızı Jartiyer Takımı",
+      price: 523.75, // 419 + %25
+      image: jartiyer1,
       category: "Jartiyer",
       isNew: true
     },
     {
-      id: "5",
-      name: "Transparan Jartiyer",
-      price: 218.75,
-      originalPrice: 275,
-      image: "/placeholder.svg",
+      id: "j6",
+      name: "Siyah Transparan Jartiyer",
+      price: 312.5, // 250 + %25
+      originalPrice: 375,
+      image: jartiyer2,
       category: "Jartiyer",
-      discount: 20
+      discount: 15
+    },
+    
+    // Babydoll kategorisi
+    {
+      id: "b1",
+      name: "Lady Baby Straplez Kesim Destekli Dikişsiz Balensiz Sütyen",
+      price: 686.25, // 549 + %25
+      image: babydoll1,
+      category: "Babydoll",
+      isNew: true
     },
     {
-      id: "6",
-      name: "Çiçekli Jartiyer",
-      price: 187.5,
-      image: "/placeholder.svg",
-      category: "Jartiyer"
+      id: "b2",
+      name: "Audrey Önü Esnek File Detaylı Hafif Destekli Balensiz Sütyen",
+      price: 736.25, // 589 + %25
+      image: babydoll2,
+      category: "Babydoll"
+    },
+    {
+      id: "b3",
+      name: "YNT Siyah Dantel Detaylı Volanlı Transparan Mini Gecelik",
+      price: 580.4, // 464.32 + %25
+      originalPrice: 631.25,
+      image: babydoll3,
+      category: "Babydoll",
+      discount: 8
+    },
+    {
+      id: "b4",
+      name: "YNT Beyaz Fiyonk Detaylı V Yaka Volanlı Transparan Gecelik",
+      price: 608, // 486.4 + %25
+      originalPrice: 661.25,
+      image: babydoll4,
+      category: "Babydoll",
+      discount: 8
+    },
+    {
+      id: "b5",
+      name: "Pembe Saten Babydoll Gecelik",
+      price: 487.5, // 390 + %25
+      image: babydoll1,
+      category: "Babydoll",
+      isNew: true
+    },
+    {
+      id: "b6",
+      name: "Beyaz Dantel Detaylı Babydoll",
+      price: 562.5, // 450 + %25
+      originalPrice: 625,
+      image: babydoll2,
+      category: "Babydoll",
+      discount: 10
+    },
+
+    // Vücut Çorapları kategorisi
+    {
+      id: "v1",
+      name: "Kadın Siyah Transparan Puantiye Desenli Külotlu Çorap",
+      price: 311.25, // 249 + %25
+      originalPrice: 350,
+      image: vucutCoraplari1,
+      category: "Vücut Çorapları",
+      discount: 15
+    },
+    {
+      id: "v2",
+      name: "Olivia Balensiz Dikişsiz Lazer Kesim Hafif Destekli Sütyen",
+      price: 573.75, // 459 + %25
+      originalPrice: 650,
+      image: vucutCoraplari2,
+      category: "Vücut Çorapları",
+      discount: 12
+    },
+    {
+      id: "v3",
+      name: "Transparan File Vücut Çorabı",
+      price: 375, // 300 + %25
+      image: vucutCoraplari1,
+      category: "Vücut Çorapları",
+      isNew: true
+    },
+    {
+      id: "v4",
+      name: "Desenli Vücut Çorabı",
+      price: 437.5, // 350 + %25
+      originalPrice: 500,
+      image: vucutCoraplari2,
+      category: "Vücut Çorapları",
+      discount: 12
+    },
+
+    // İç Çamaşır Takımları kategorisi
+    {
+      id: "i1",
+      name: "Intive Pudra Pembe Simli V Yaka İnce Askılı Mini Gecelik",
+      price: 1061.25, // 849 + %25
+      image: icCamasirTakimi1,
+      category: "İç Çamaşır Takımları",
+      isNew: true
+    },
+    {
+      id: "i2",
+      name: "Ellie Dikişsiz İce-Silk Görünmez Ultra Hafif Padli Bralet",
+      price: 611.25, // 489 + %25
+      image: icCamasirTakimi2,
+      category: "İç Çamaşır Takımları",
+      isNew: true
+    },
+    {
+      id: "i3",
+      name: "Kırmızı Dantel İç Çamaşır Takımı",
+      price: 750, // 600 + %25
+      originalPrice: 850,
+      image: icCamasirTakimi1,
+      category: "İç Çamaşır Takımları",
+      discount: 12
+    },
+    {
+      id: "i4",
+      name: "Siyah Saten İç Çamaşır Takımı",
+      price: 812.5, // 650 + %25
+      image: icCamasirTakimi2,
+      category: "İç Çamaşır Takımları",
+      isNew: true
     }
   ];
+
+  const products = allProducts.filter(product => {
+    const categoryMap = {
+      jartiyer: "Jartiyer",
+      babydoll: "Babydoll", 
+      vucutcoraplari: "Vücut Çorapları",
+      iccamasirtakimlari: "İç Çamaşır Takımları"
+    };
+    return product.category === categoryMap[category as keyof typeof categoryMap];
+  });
 
   const categoryTitles = {
     jartiyer: "Jartiyer",
