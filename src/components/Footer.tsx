@@ -1,5 +1,7 @@
 import { MapPin, Phone, Mail, Globe, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import asligibiLogo from "@/assets/asligibi-logo.png";
+import tozSolutionsLogo from "@/assets/toz-solutions-logo.png";
 
 const Footer = () => {
   const categories = [
@@ -29,10 +31,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-futura font-bold text-lg">AG</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src={asligibiLogo} 
+                alt="AslıGibi" 
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-futura font-bold">AslıGibi</span>
             </Link>
             <p className="text-sm font-futura opacity-90">
@@ -159,8 +163,8 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <span className="text-sm font-futura opacity-90">Design By</span>
               <img
-                src="/placeholder.svg"
-                alt="Solutions"
+                src={tozSolutionsLogo}
+                alt="Toz Solutions"
                 className="h-6 w-auto"
               />
             </div>

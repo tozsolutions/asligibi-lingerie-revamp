@@ -3,6 +3,7 @@ import { ShoppingCart, Search, User, Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
+import asligibiLogo from "@/assets/asligibi-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,10 +40,12 @@ const Header = () => {
             </Button>
 
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-futura font-bold text-xl">AG</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src={asligibiLogo} 
+                alt="AslıGibi" 
+                className="h-12 w-auto"
+              />
               <span className="text-2xl font-futura font-bold text-primary hidden sm:block">
                 AslıGibi
               </span>
