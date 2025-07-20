@@ -8,52 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 140 10% 15%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 140 10% 15%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 10% 15%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Rolex Yeşili - Ana Renk */
-    --primary: 140 70% 25%;
-    --primary-foreground: 0 0% 100%;
+    /* Agent Provocateur Style - Lüks Siyah/Pembe */
+    --primary: 320 100% 75%; /* Hot Pink */
+    --primary-foreground: 0 0% 0%;
 
-    /* Ana Rengin İki Kat Koyusu - İkinci Yardımcı Renk */
-    --secondary: 140 70% 12.5%;
+    /* Derin Siyah - İkinci Yardımcı Renk */
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 140 20% 96%;
-    --muted-foreground: 140 10% 45%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 140 30% 85%;
-    --accent-foreground: 140 70% 20%;
+    --accent: 320 50% 85%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 140 15% 90%;
-    --input: 140 15% 90%;
-    --ring: 140 70% 25%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 320 100% 75%;
 
     --radius: 0.5rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(140, 70%, 25%), hsl(140, 70%, 35%));
-    --gradient-secondary: linear-gradient(135deg, hsl(140, 70%, 12.5%), hsl(140, 70%, 20%));
-    --gradient-hero: linear-gradient(135deg, hsl(140, 70%, 25%), hsl(140, 70%, 12.5%));
+    /* Agent Provocateur Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(320, 100%, 75%), hsl(340, 100%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(0, 0%, 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(320, 100%, 20%));
 
-    /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 140 10% 25%;
-    --sidebar-primary: 140 70% 25%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 140 20% 95%;
-    --sidebar-accent-foreground: 140 70% 20%;
-    --sidebar-border: 140 15% 90%;
-    --sidebar-ring: 140 70% 25%;
+    /* Sidebar - Agent Provocateur Style */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 320 100% 75%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 320 100% 75%;
   }
 
   .dark {

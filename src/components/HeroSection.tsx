@@ -14,21 +14,21 @@ const HeroSection = () => {
       subtitle: "İlk alışverişine özel indirim kodun: Merhaba",
       buttonText: "Alışverişe Başla",
       image: heroBanner1,
-      gradient: "from-primary/90 to-secondary/90"
+      gradient: "from-secondary/90 to-primary/20"
     },
     {
-      title: "Lazer Kesim Koleksiyonu",
-      subtitle: "Zarif ve modern tasarımlarla tanışın",
+      title: "Lüks Koleksiyonu",
+      subtitle: "Sofistike ve büyüleyici tasarımlarla tanışın",
       buttonText: "Keşfet",
       image: heroBanner2,
-      gradient: "from-secondary/90 to-primary/90"
+      gradient: "from-primary/90 to-secondary/90"
     },
     {
       title: "Dantel Ürünleri",
-      subtitle: "Klasik şıklığın modern yorumu",
+      subtitle: "Zarafet ve şıklığın kusursuz birleşimi",
       buttonText: "İncele",
       image: heroBanner3,
-      gradient: "from-primary/90 to-secondary/90"
+      gradient: "from-secondary/90 to-primary/20"
     }
   ];
 
